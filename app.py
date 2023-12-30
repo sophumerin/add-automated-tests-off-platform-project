@@ -21,7 +21,7 @@ def withdraw():
     amount = request.args.get('amount')
     if(int(amount) > balance):
         return jsonify({'balance': balance})    
-    balance = balance - int(amount)
+    balance = balance + int(amount)
     return jsonify({'balance': balance})
 
 if __name__ == '__main__':
